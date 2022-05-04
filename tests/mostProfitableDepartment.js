@@ -17,7 +17,7 @@ it("Should return 'outdoor' when called with mostProfitableDepartment(salesData)
         {department : 'carpentry', sales : 6109, day : 'Thursday'},
         {department : 'hardware', sales : 7005, day : 'Friday'},
         {department : 'outdoor', sales : 12006, day : 'Friday'},
-        {department : 'carpentry', sales : 16109, day : 'Friday'},
+        {department : 'carpentry', sales : 16109, day :  'Friday'},
     ];
 
 assert.equal('outdoor', mostProfitableDepartment(salesData))

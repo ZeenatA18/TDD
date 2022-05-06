@@ -1,4 +1,4 @@
-describe("Function should return all the registration numbers in the string for Paarl", function () {
+describe("Function should return number of registration numbers in the string for Paarl", function () {
 
     it("Should return '2' when called with 'allPaarl(regNumbers)'", function () {
 
@@ -6,23 +6,15 @@ describe("Function should return all the registration numbers in the string for 
 
     })
 
-    it("Should return 'CJ 678 543' when called with 'regNumbersForPaarl[0]'", function () {
+    it("Should return '4' when called with 'allPaarl(regNumbers)'", function () {
 
-        var regNumbers = 'CL 900, CJ 678 543, CA 34567, CJ 67890, CN 7864';
-
-        var regNumbersForPaarl = allPaarl(regNumbers);
-
-        assert.equal('CJ 678 543', regNumbersForPaarl[0]);
+        assert.equal(4, allPaarl('CJ 900, CJ 678 543, CJ 34567, CJ 67890, CN 7864').length, 'There are four registration numbers')
 
     })
 
-    it("Should return 'CJ 67890' when called with 'regNumbersForPaarl[1]'", function () {
+    it("Should return '0' when called with 'allPaarl(regNumbers)'", function () {
 
-        var regNumbers = 'CL 900, CJ 678 543, CA 34567, CJ 67890, CN 7864';
-
-        var regNumbersForPaarl = allPaarl(regNumbers);
-
-        assert.equal('CJ 67890', regNumbersForPaarl[1]);
+        assert.equal(0, allPaarl('CL 900, CC 678 543, CA 34567, CA 67890, CN 7864').length, 'There are four registration numbers')
 
     })
 
